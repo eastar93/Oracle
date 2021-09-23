@@ -13,12 +13,24 @@ CREATE TABLE board_tbl (
     regdate date default sysdate,
     updatedate date default sysdate
     );
-    
+DROP TABLE board_tbl;
+
+-- 시퀀스 생성 --
+CREATE SEQUENCE board_num;
+
+-- 시퀀스 삭제 -- 
+DROP SEQUENCE board_num;
+
+-- 드랍후 적용 -- 
+commit;
+
 alter table board_tbl add constraint pk_board primary key(bno);
 
 insert into board_tbl (bno, title, content, writer) values (board_num.nextval, '테스트글', '테스트본문', '글쓴이');
 
 select * from board_tbl;
+
+SELECT * FROM board_tbl ORDER BY bno DESC;
 SELECT * FROM board_tbl WHERE bno < 4 ORDER BY bno DESC;
 
-commit;
+
