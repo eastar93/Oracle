@@ -63,5 +63,7 @@ alter table reply_tbl add constraint pk_reply primary key(rno);
 alter table reply_tbl add constraint fk_reply
 foreign key (bno) references board_tbl(bno);
 
+select * from reply_tbl;
+
 COMMIT;
     
