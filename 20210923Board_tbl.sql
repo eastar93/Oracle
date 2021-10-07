@@ -66,4 +66,6 @@ foreign key (bno) references board_tbl(bno);
 select * from reply_tbl;
 
 COMMIT;
+
+select reply_num from dual;
     
