@@ -50,3 +50,14 @@ CREATE TABLE member_auth(
 select * from member_auth;
 
     DROP TABLE member_auth;
+
+CREATE TABLE persistent_logins (
+    username varchar(64) not null,
+    series varchar(64) primary key,
+    token varchar(64) not null,
+    last_used timestamp not null
+    );
+SELECT * FROM persistent_logins;
+
+SELECT * FROM Member_tbl;
+SELECT * FROM MEMBER_auth;
