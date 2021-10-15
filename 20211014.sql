@@ -9,3 +9,4 @@ CREATE TABLE img_tbl(
 alter table img_tbl add constraint pk_img primary key (uuid);
 alter table img_tbl add constraint fk_board_img foreign key (bno) references board_tbl (bno);
     
+select * from img_tbl;
