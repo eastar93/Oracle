@@ -2,7 +2,7 @@ CREATE TABLE img_tbl(
     uuid varchar(100) not null,
     uploadPath varchar2(200) not null,
     fileName varchar2(100) not null,
-    filetype char(1) default 'I',
+    image char(1) default 'I',
     bno number(10, 0)
     );
 
